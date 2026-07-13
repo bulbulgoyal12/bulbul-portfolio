@@ -1,72 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Bulbul Goyal</title>
-
-<meta name="description" content="Contact Bulbul Goyal">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bulbul Goyal</title>
+    <meta name="description" content="Get in touch with Bulbul Goyal for web development projects and opportunities.">
+    <meta name="author" content="Bulbul Goyal">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<nav aria-label="Main Navigation">
-<h2 class="logo">Bulbul Goyal</h2>
+    <!-- Header / Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo" aria-label="Bulbul Goyal Home">Bulbul</a>
+            
+            <nav id="nav-links" class="nav-links" aria-label="Main Navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+            
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Light/Dark Mode" title="Toggle Theme"></button>
+                <button id="mobile-toggle" class="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
-<li><a href="certificates.html">Certificates</a></li>
-</ul>
-</nav>
-</header>
+    <main>
+        <section class="container">
+            <h1 class="reveal">Get In <span class="text-accent">Touch</span></h1>
+            
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <p style="margin-bottom: 2rem;">
+                        I'm always open to new opportunities, freelance projects, or just a chat about technology. Fill out the form below and I'll get back to you!
+                    </p>
+                    
+                    <form action="#" method="POST" class="card" onsubmit="event.preventDefault(); alert('Form submission simulated! Backend not connected.');">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required aria-required="true" placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required aria-required="true" placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required aria-required="true" placeholder="How can I help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="contact-info-panel">
+                        <h3>Contact Information</h3>
+                        <p style="margin-bottom: 2rem;">Prefer reaching out directly? Here are my details.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.875rem; color: var(--text-muted);">Email</span>
+                                <a href="mailto:goyalbulbul40@gmail.com" style="font-weight: 500;">goyalbulbul40@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.022-3.498-6.82-2.108 1.039c-1.11.545-2.28 1.58-2.28 3.96 0 2.451 3.204 8.795 7.625 11.236 2.148 1.182 4.195 1.597 5.86 1.057 1.838-.598 2.523-1.666 2.523-1.666l-.011.006zm-7.619-14.733c3.551.493 6.326 3.238 6.85 6.788l1.968-.456c-.636-4.321-3.996-7.643-8.361-8.3z"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.875rem; color: var(--text-muted);">Phone</span>
+                                <a href="tel:+919680905708" style="font-weight: 500;">+91 9680905708</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.875rem; color: var(--text-muted);">Location</span>
+                                <span style="font-weight: 500;">Gwalior, Madhya Pradesh</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" style="border: none;">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 0.875rem; color: var(--text-muted);">LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/bulbul-goyal-6a5523364" target="_blank" rel="noopener noreferrer" style="font-weight: 500;">Connect on LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<main class="about">
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Bulbul Goyal. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/bulbulgoyal12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/bulbul-goyal-6a5523364" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="mailto:goyalbulbul40@gmail.com" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.866l5.6-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
 
-<h1>Contact Me</h1>
-
-<form>
-
-<label>Name</label><br>
-<input type="text" placeholder="Enter your name" aria-label="Name" required><br><br>
-<label>Email</label><br>
-<input type="email" placeholder="Enter your email" aria-label="Email" required><br><br>
-
-<label>Message</label><br>
-<textarea rows="5" placeholder="Write your message" aria-label="Message"></textarea><br><br>
-
-<button class="btn">Send Message</button>
-
-</form>
-
-<hr><br>
-
-<h2>Contact Information</h2>
-
-<p>📧 Email: goyalbulbul40@gmail.com</p>
-
-<p>📱 Phone: +91 9680905708</p>
-
-<p>📍 Gwalior, Madhya Pradesh</p>
-
-<p>💼 LinkedIn:
-<a href="https://www.linkedin.com/in/bulbul-goyal-6a5523364" target="_blank">View Profile</a>
-</p>
-
-<p>💻 GitHub:
-<a href="https://github.com/bulbulgoyal12" target="_blank">Visit GitHub</a>
-</p>
-
-</main>
-
-<footer>
-<p>© 2026 Bulbul Goyal | All Rights Reserved</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
